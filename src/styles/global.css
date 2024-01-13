@@ -3,21 +3,21 @@
   src: url("./fonts/MaskdownOne-BWV7V.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "Onerock";
   src: url("./fonts/Onerock.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 @font-face {
   font-family: "DeadwaxEx";
   src: url("./fonts/DeadwaxEx.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 h1 {
