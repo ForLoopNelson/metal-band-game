@@ -3,8 +3,22 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css'
 
+const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx"]
 const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised"]
 const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails"]
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+const randomFirstWordIndex = getRandomIndex(firstWords);
+const randomSecondWordIndex = getRandomIndex(secondWords);
+const randomFonts = getRandomIndex(fonts)
+
+const selectedFirstWord = firstWords[randomFirstWordIndex];
+const selectedSecondWord = secondWords[randomSecondWordIndex];
+const selectedFont = fonts[randomFonts];
+
 ---
 
 <Layout title="What's That Say?">
@@ -42,16 +56,17 @@ const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "
 		
 		<ul role="list" class="link-card-grid">
 			<!-- Have instructions and exmaples here -->
-		<span class="metal">Fungal Bum</span>
-		<span class="metal2">Sword Machine</span>
-		<span class="metal3">Pickled Fish</span>
-		<span class="metal">Morbid Boner</span>
+		<span id="random-font" > {selectedFirstWord} {selectedSecondWord}</span>
+		<section>
+		<input type="text" class="guess" >
+		<button onclick="checkGuess()">Guess</button>
+		</section>
 		</ul>
     <p class="return">return to <a href="/">main</a> page?</p>
 	</main>
 </Layout>
 
-<style>
+<style define:vars={{selectedFont}}>
 	main {
 		margin: auto;
 		padding: 1rem;
@@ -60,6 +75,7 @@ const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "
 		color: white;
 		font-size: 20px;
 		line-height: 1.6;
+		
 	}
 	.astro-a {
 		position: absolute;
@@ -116,6 +132,17 @@ const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "
     align-items: center;
     margin-top: 3rem;
   }
+
+	.font1 { font-family: "MaskdownOne-BWV7V", sans-serif; }
+    .font2 { font-family: "DeadwaxEx", sans-serif; }
+    .font3 { font-family: "Onerock", sans-serif; }
+
+		   /* Apply font dynamically */
+    #random-font {
+      font-family: var(--selectedFont, sans-serif);
+			font-size: 4rem;
+    }
+
 
   
 </style>
