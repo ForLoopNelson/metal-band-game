@@ -4,8 +4,8 @@ import Card from '../components/Card.astro';
 import '../styles/global.css'
 
 const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx"]
-const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised"]
-const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails"]
+const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised", "Accordian", "Helmet", "Fragile", "Exiled"]
+const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails", "Pocket", "Zebra", "Fatal", "Dirt", ""]
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -51,7 +51,7 @@ const selectedFont = fonts[randomFonts];
 				</linearGradient>
 			</defs>
 		</svg>
-		<h1>What That<span class="text-gradient">Say</span></h1>
+		<h1><span class="text-gradient">What That Say</span></h1>
     
 		
 		<ul role="list" class="link-card-grid">
@@ -100,24 +100,9 @@ const selectedFont = fonts[randomFonts];
 		background-size: 400%;
 		background-position: 0%;
 	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(rgba(var(--accent-dark), 66%), rgba(var(--accent-dark), 33%));
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
+	
+	
+	
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
