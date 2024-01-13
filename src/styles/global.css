@@ -1,13 +1,20 @@
 @font-face {
   font-family: "MaskdownOne-BWV7V";
-  src: url("./MaskdownOne-BWV7V.otf") format("opentype");
+  src: url("./fonts/MaskdownOne-BWV7V.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: "Onerock";
-  src: url("./Onerock.otf") format("opentype");
+  src: url("./fonts/Onerock.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DeadwaxEx";
+  src: url("./fonts/DeadwaxEx.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -20,5 +27,13 @@ h1 {
 
 .metal {
   font-family: "MaskdownOne-BWV7V", sans-serif;
-  font-size: 4pprem;
+  font-size: 4rem;
+}
+.metal2 {
+  font-family: "DeadwaxEx", sans-serif;
+  font-size: 4rem;
+}
+.metal3 {
+  font-family: "Onerock", sans-serif;
+  font-size: 4rem;
 }
