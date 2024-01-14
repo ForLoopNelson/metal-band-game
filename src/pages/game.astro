@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import '../styles/global.css'
 
-const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx"]
+const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx", "Rusuck", "Gorezack"]
 const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised", "Accordian", "Helmet", "Fragile", "Exiled"]
 const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails", "Pocket", "Zebra", "Fatal", "Dirt", ""]
 
@@ -59,10 +59,10 @@ const selectedFont = fonts[randomFonts];
 		<span id="random-font" > {selectedFirstWord} {selectedSecondWord}</span>
 		<section>
 		<input type="text" class="guess" >
-		<button onclick="checkGuess()">Guess</button>
+		<button onclick="checkGuess()" id="guess-btn">Guess</button>
 		</section>
 		</ul>
-    <p class="return">return to <a href="/">main</a> page?</p>
+    <p class="return">return to &nbsp;<a href="/" id="main-page">main</a>&nbsp; page?</p>
 	</main>
 </Layout>
 
@@ -111,22 +111,55 @@ const selectedFont = fonts[randomFonts];
     margin-top: 8rem;
 	}
 
+	#main-page {
+		text-decoration: none;
+		color: crimson;
+	}
+	#main-page:hover {
+		text-decoration:underline;
+		color: white;
+	}
+
   .return {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 3rem;
+		text-decoration: none;
+		
   }
 
 	.font1 { font-family: "MaskdownOne-BWV7V"; }
     .font2 { font-family: "DeadwaxEx"; }
     .font3 { font-family: "Onerock"; }
+    .font4 { font-family: "Rusuck"; }
+    .font5 { font-family: "Gorezack"; }
 
 		   /* Apply font dynamically */
     #random-font {
       font-family: var(--selectedFont, sans-serif);
 			font-size: 4rem;
     }
+
+		.guess {
+			margin-top: 30px;
+			border-radius: 20px;
+			width: 69%;
+			height: 35px;
+			border: 2px ridge rgb(93, 1, 47);
+		}
+
+		#guess-btn {
+			background: rgba(190, 44, 29, .8);
+			color: aliceblue;
+			margin-top: 15px;
+			margin-left: 139px;
+			border-radius: 18px;
+			border: 2px ridge rgb(241, 163, 18);
+			height: 36px;
+			width: 35%;
+
+		}
 
 
   
