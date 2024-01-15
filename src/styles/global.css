@@ -38,3 +38,27 @@ h1 {
   font-family: "Onerock", Arial, Helvetica, sans-serif;
   font-size: 2rem;
 }
+
+button {
+  cursor: pointer;
+}
+
+/* Media Q */
+
+@media screen and (max-width: 440px) {
+  .text-gradient {
+    font-size: 37px;
+  }
+
+  #random-font {
+    font-size: 20px;
+  }
+
+  #guess-btn {
+    margin-left: -2px !important;
+  }
+
+  .score {
+    font-size: 1rem;
+  }
+}
