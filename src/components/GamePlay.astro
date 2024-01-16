@@ -1,0 +1,143 @@
+---
+import '../styles/global.css'
+
+const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx", "Rusuck", "Gorezack"]
+const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised", "Accordian", "Helmet", "Fragile", "Exiled", "Magic", "Chains", "Corruption", "Rat", "Infested", "Rotted", "Glowing", "Looking"]
+const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails", "Pocket", "Zebra", "Fatal", "Dirt", "Snail", "Despair", "Nothing", "Raven", "Frown", "Boom"]
+
+function getRandomIndex(array) {
+  return Math.floor(Math.random() * array.length);
+}
+
+const randomFirstWordIndex = getRandomIndex(firstWords);
+const randomSecondWordIndex = getRandomIndex(secondWords);
+
+
+const selectedFirstWord = firstWords[randomFirstWordIndex];
+const selectedSecondWord = secondWords[randomSecondWordIndex];
+const selectedWords = `${selectedFirstWord} ${selectedSecondWord}`
+
+const randomFonts = getRandomIndex(fonts)
+const selectedFont = fonts[randomFonts];
+---
+
+
+<script is:inline>
+  // Find the button with the ID `guess-btn` on the page.
+  const button = document.getElementById('guess-btn');
+  const guess = document.querySelector('.guess')
+  
+
+  // Handle click on the button.
+  button.addEventListener('click', () => {
+    const guessValue = guess.value
+    if (selectedWords.toLowerCase() == guessValue.toLowerCase()){
+      console.log('Match')
+    } else {
+      console.log("you suck")
+    }
+  });
+</script>
+
+<ul role="list" class="link-card-grid">
+		<span id="random-font" >{selectedWords}</span>
+		<section>
+		<input type="text" class="guess" >
+		<button  id="guess-btn">Guess</button>
+		</section>
+		</ul>
+		<section class="score-guesses">
+			<p>Guesses: <span id="guesses-left">3</span>/3</p>&nbsp;&nbsp;&nbsp;
+			<p class="score">Score: <span id="current-score">0</span>/666</p>
+		</section>
+
+    <style define:vars={{selectedFont}}>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 800px;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+		
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	
+	
+	
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+    margin-top: 8rem;
+	}
+
+
+
+ 
+
+	.font1 { font-family: "MaskdownOne-BWV7V"; }
+    .font2 { font-family: "DeadwaxEx"; }
+    .font3 { font-family: "Onerock"; }
+    .font4 { font-family: "Rusuck"; }
+    .font5 { font-family: "Gorezack"; }
+
+		   /* Apply font dynamically */
+    #random-font {
+      font-family: var(--selectedFont, sans-serif);
+			font-size: 4rem;
+    }
+
+		.guess {
+			margin-top: 30px;
+			border-radius: 20px;
+			width: 69%;
+			height: 35px;
+			border: 2px ridge rgb(93, 1, 47);
+		}
+
+		#guess-btn {
+			background: rgba(190, 44, 29, .8);
+			color: aliceblue;
+			margin-top: 15px;
+			margin-left: 139px;
+			border-radius: 18px;
+			border: 2px ridge rgb(241, 163, 18);
+			height: 36px;
+			width: 35%;
+
+		}
+
+		.score-guesses {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-top: 60px;
+			font-family:'Times New Roman', Times, serif;
+			font-size: 2.5rem;
+			
+		}
