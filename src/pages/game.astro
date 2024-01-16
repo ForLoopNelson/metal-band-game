@@ -18,8 +18,9 @@ const selectedFirstWord = firstWords[randomFirstWordIndex];
 const selectedSecondWord = secondWords[randomSecondWordIndex];
 const selectedWords = `${selectedFirstWord} ${selectedSecondWord}`
 const selectedFont = fonts[randomFonts];
-
 ---
+<script>import '../scripts/play'</script>
+
 
 <Layout title="What's That Say?">
 	<main>
@@ -31,16 +32,18 @@ const selectedFont = fonts[randomFonts];
 		<span id="random-font" >{selectedWords}</span>
 		<section>
 		<input type="text" class="guess" >
-		<button onclick="checkGuess()" id="guess-btn">Guess</button>
+		<button id="guess-btn" type="submit">Guess</button>
 		</section>
 		</ul>
 		<section class="score-guesses">
 			<p>Guesses: <span id="guesses-left">3</span>/3</p>&nbsp;&nbsp;&nbsp;
-			<p class="score">Score: <span id="current-score">0</span>/666</p>
+			<p class="score">Score:<span id="update">0</span></p>
 		</section>
     
 	</main>
+
 </Layout>
+
 
 <style define:vars={{selectedFont}}>
 	main {
@@ -132,7 +135,6 @@ const selectedFont = fonts[randomFonts];
 			font-size: 2.5rem;
 			
 		}
-
-
-  
 </style>
+
+
