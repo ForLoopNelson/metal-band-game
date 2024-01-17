@@ -71,12 +71,22 @@ button {
     margin-left: -2px !important;
   }
 
-  .score-guesses {
-    font-size: 1rem;
-  }
-
   .ex {
     margin-bottom: 40px;
     margin-top: 0;
+  }
+
+  .score-guesses {
+    padding-right: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .score {
+    padding-right: 170px;
+    margin-bottom: 20px;
+    font-size: 40px;
   }
 }
