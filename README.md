@@ -15,3 +15,4 @@
 - [x] Deploy Site
 - [x] test on multiple devices
 - [ ] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
+- [ ] Write Function to get Enter key to act like user pressed guess button
