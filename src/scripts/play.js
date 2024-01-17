@@ -77,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let guesses = 3
 
   button.addEventListener("click", () => {
+    if (localStorage.getItem("score") != null) {
+      score = localStorage.getItem("score")
+      update.innerHTML = localStorage.getItem("score")
+    }
     const word = document
       .querySelector("#random-font")
       .textContent.toLowerCase()
@@ -85,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (word === guess) {
       score++
       document.querySelector("#update").innerText = score
+      localStorage.setItem("score", score)
+      update.innerHTML = localStorage.getItem("score")
       generateNewWords()
     } else {
       alert("That is incorrect. Try again")
@@ -94,6 +100,12 @@ document.addEventListener("DOMContentLoaded", () => {
         alert(`You've run out of guesses! The correct answer was ${word}.`)
       }
     }
+    document.querySelector(".reset-game").addEventListener("click", () => {
+      score = 0
+
+      localStorage.setItem("score", score)
+      update.innerHTML = localStorage.getItem("score")
+    })
   })
   function generateNewWords() {
     const newFirstWord = getRandomWord(firstWords)
