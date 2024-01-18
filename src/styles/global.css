@@ -56,6 +56,22 @@ button {
   padding-left: 160px;
 }
 
+.return {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+  text-decoration: none;
+  color: white;
+}
+.reset-game {
+  background: lightskyblue;
+  color: black;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 20px;
+}
+
 /* Media Q */
 
 @media screen and (max-width: 440px) {
@@ -82,11 +98,29 @@ button {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    margin: 20px !important;
+    padding-left: 30px;
   }
 
   .score {
     padding-right: 170px;
-    margin-bottom: 20px;
-    font-size: 40px;
+    margin-bottom: 50px;
+    font-size: 20px;
+    line-height: 2px;
+  }
+
+  #guesses-left,
+  .p-guess {
+    margin: 0;
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .return {
+    font-size: 13px;
+  }
+
+  .reset-game {
+    height: 1.56rem;
+    font-size: 16px;
   }
 }
