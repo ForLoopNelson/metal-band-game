@@ -1,65 +1,4 @@
-const fonts = [
-  "Onerock",
-  "MaskdownOne-BWV7V",
-  "DeadwaxEx",
-  "Rusuck",
-  "Gorezack",
-]
-const firstWords = [
-  "Disaster",
-  "Morbid",
-  "Sword",
-  "Pickled",
-  "Carnage",
-  "Brutal",
-  "Doom",
-  "Swell",
-  "Giant",
-  "Grasping",
-  "Flightless",
-  "Fungal",
-  "Trash",
-  "Spine",
-  "Bruised",
-  "Accordian",
-  "Helmet",
-  "Fragile",
-  "Exiled",
-  "Magic",
-  "Chains",
-  "Corruption",
-  "Rat",
-  "Infested",
-  "Rotted",
-  "Glowing",
-  "Looking",
-]
-const secondWords = [
-  "Fish",
-  "Meal",
-  "Bike",
-  "Crow",
-  "Pool",
-  "Crank",
-  "Water",
-  "Fire",
-  "Skull",
-  "Broom",
-  "Hooks",
-  "Storm",
-  "Flesh",
-  "Nails",
-  "Pocket",
-  "Zebra",
-  "Fatal",
-  "Dirt",
-  "Snail",
-  "Despair",
-  "Nothing",
-  "Raven",
-  "Frown",
-  "Boom",
-]
+import { fonts, firstWords, secondWords } from "../scripts/collection"
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length)
@@ -73,6 +12,7 @@ function getRandomWord(array) {
 document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("guess-btn")
   const guessInput = document.querySelector(".guess")
+  const resultMsg = document.querySelector("#guess-msg")
   let score = 0
   let guesses = 3
 
@@ -89,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
       update.innerHTML = localStorage.getItem("score")
     }
 
+    resultMsg.innerText = ""
     const word = document
       .querySelector("#random-font")
       .textContent.toLowerCase()
@@ -101,11 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
       update.innerHTML = localStorage.getItem("score")
       generateNewWords()
     } else {
-      alert("That is incorrect. Try again")
+      resultMsg.innerText = "Not correct. Try again."
       guesses--
       document.querySelector("#guesses-left").innerText = guesses
       if (guesses == 0) {
-        alert(`You've run out of guesses! The correct answer was ${word}.`)
+        resultMsg.innerText = `You've run out of guesses! The correct answer was ${word}.`
       }
     }
     document.querySelector(".reset-game").addEventListener("click", () => {

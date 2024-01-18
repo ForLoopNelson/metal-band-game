@@ -1,10 +1,9 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
+import {fonts, firstWords, secondWords} from '../scripts/collection'
+ 
 
-const fonts = ["Onerock", "MaskdownOne-BWV7V", "DeadwaxEx", "Rusuck", "Gorezack"]
-const firstWords = ["Disaster", "Morbid", "Sword", "Pickled", "Carnage", "Brutal", "Doom", "Swell", "Giant", "Grasping", "Flightless", "Fungal", "Trash","Spine", "Bruised", "Accordian", "Helmet", "Fragile", "Exiled", "Magic", "Chains", "Corruption", "Rat", "Infested", "Rotted", "Glowing", "Looking"]
-const secondWords = ["Fish", "Meal", "Bike", "Crow", "Pool", "Crank", "Water", "Fire", "Skull", "Broom", "Hooks", "Storm", "Flesh", "Nails", "Pocket", "Zebra", "Fatal", "Dirt", "Snail", "Despair", "Nothing", "Raven", "Frown", "Boom"]
 
 function getRandomIndex(array) {
   return Math.floor(Math.random() * array.length);
@@ -37,11 +36,16 @@ const selectedFont = fonts[randomFonts];
 		<input type="text" class="guess" >
 		<button id="guess-btn" type="submit">Guess</button>
 		</section>
+		<span id="guess-msg"></span>
 		</ul>
 		<section class="score-guesses">
 			
+			
+			
+			
 			<span id="guesses-left">3</span>&nbsp;<p class="p-guess">Guesses Left</p>&nbsp;&nbsp;
 			<p class="score">Score:&nbsp;<span id="update">0</span></p>
+			
 		</section>
     <p class="return"><button class="reset-game"> Reset Game (Will reset the score)</button></p>
 	</main>
@@ -75,6 +79,15 @@ const selectedFont = fonts[randomFonts];
 		background-position: 0%;
 	}
 	
+	#guess-msg {
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		font-size: 20px;
+		color: red;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+	}
 	
 	
 	.link-card-grid {
@@ -112,7 +125,7 @@ const selectedFont = fonts[randomFonts];
 			background: rgba(190, 44, 29, .8);
 			color: aliceblue;
 			margin-top: 15px;
-			margin-left: 139px;
+			margin-left: 155px;
 			border-radius: 18px;
 			border: 2px ridge rgb(241, 163, 18);
 			height: 36px;
@@ -122,6 +135,7 @@ const selectedFont = fonts[randomFonts];
 
 		.score-guesses {
 			display: flex;
+			flex-wrap: wrap;
 			justify-content: center;
 			align-items: center;
 			margin-top: 60px;
