@@ -76,11 +76,19 @@ document.addEventListener("DOMContentLoaded", () => {
   let score = 0
   let guesses = 3
 
-  button.addEventListener("click", () => {
+  button.addEventListener("click", handleButtonClick)
+
+  guessInput.addEventListener("keypress", (event) => {
+    if (event.key === "Enter") {
+      handleButtonClick()
+    }
+  })
+  function handleButtonClick() {
     if (localStorage.getItem("score") != null) {
       score = localStorage.getItem("score")
       update.innerHTML = localStorage.getItem("score")
     }
+
     const word = document
       .querySelector("#random-font")
       .textContent.toLowerCase()
@@ -106,7 +114,7 @@ document.addEventListener("DOMContentLoaded", () => {
       localStorage.setItem("score", score)
       update.innerHTML = localStorage.getItem("score")
     })
-  })
+  }
   function generateNewWords() {
     const newFirstWord = getRandomWord(firstWords)
     const newSecondWord = getRandomWord(secondWords)
