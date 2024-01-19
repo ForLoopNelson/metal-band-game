@@ -27,6 +27,13 @@
   font-display: block;
 }
 @font-face {
+  font-family: "CronicleDemo";
+  src: url("./fonts/CronicleDemo.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
   font-family: "Gorezack";
   src: url("./fonts/Gorezack.otf") format("opentype");
   font-weight: 200;
@@ -65,9 +72,10 @@ button {
   color: white;
 }
 .reset-game {
-  background: lightskyblue;
-  color: black;
-  border-radius: 5px;
+  background: rgb(78, 78, 80);
+  color: whitesmoke;
+  border-radius: 9px;
+  border: 1px ridge rgb(66, 65, 67);
   height: 2rem;
   font-size: 20px;
 }
