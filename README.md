@@ -14,5 +14,7 @@
 - [ ] Utilize Astro's components and props
 - [x] Deploy Site
 - [x] test on multiple devices
-- [ ] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
+- [x] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
 - [x] Write Function to get Enter key to act like user pressed guess button
+- [ ] Get Score to display properly on refresh and load
+- [ ] Add more and more word choices so that the combos are endless!!!!
