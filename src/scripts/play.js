@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const guessInput = document.querySelector(".guess")
   const resultMsg = document.querySelector("#guess-msg")
   const update = document.getElementById("update")
-  let score = 0
   let guesses = 3
+  let score = 0
 
   button.addEventListener("click", handleButtonClick)
 
@@ -47,13 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
       guesses--
       setTimeout(() => {
         resultMsg.innerText = ""
-      }, 3000)
+      }, 5000)
       document.querySelector("#guesses-left").innerText = guesses
       if (guesses == 0) {
         resultMsg.innerText = `You've run out of guesses! The correct answer was ${word}. Use Reset Game button to start over`
-        setTimeout(() => {
-          resultMsg.innerText = ""
-        }, 5000)
       }
     }
     document.querySelector("#update").innerText = score
@@ -61,9 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelector(".reset-game").addEventListener("click", () => {
       score = 0
-
+      guesses = 3
       localStorage.setItem("score", score)
       update.innerHTML = localStorage.getItem("score")
+      location.reload()
     })
   }
 
