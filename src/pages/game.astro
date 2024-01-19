@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import '../styles/global.css'
 import {fonts, firstWords, secondWords} from '../scripts/collection'
+
  
 
 
@@ -44,7 +45,7 @@ const selectedFont = fonts[randomFonts];
 			
 			
 			<span id="guesses-left">3</span>&nbsp;<p class="p-guess">Guesses Left</p>&nbsp;&nbsp;
-			<p class="score">Score:&nbsp;<span id="update">0</span></p>
+			<p class="score">Score:&nbsp;<span id="update"></span></p>
 			
 		</section>
     <p class="return"><button class="reset-game"> Reset Game (Will reset the score)</button></p>
@@ -107,6 +108,7 @@ const selectedFont = fonts[randomFonts];
     .font3 { font-family: "Onerock"; }
     .font4 { font-family: "Rusuck"; }
     .font5 { font-family: "Gorezack"; }
+    .font6 { font-family: "CronicleDemo"; }
 
     #random-font {
       font-family: var(--selectedFont, sans-serif);
