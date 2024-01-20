@@ -18,4 +18,4 @@
 - [x] Write Function to get Enter key to act like user pressed guess button
 - [ ] Get Score to display properly on refresh and load
 - [x] Add more and more word choices so that the combos are endless!!!!
-- [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area
+- [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
