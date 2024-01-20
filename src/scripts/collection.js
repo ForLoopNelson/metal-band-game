@@ -1,4 +1,4 @@
-export const fonts = [
+export var fonts = [
   "Onerock",
   "MaskdownOne-BWV7V",
   "DeadwaxEx",
@@ -6,7 +6,7 @@ export const fonts = [
   "Gorezack",
   "CronicleDemo",
 ]
-export const firstWords = [
+export var firstWords = [
   "Disaster",
   "Morbid",
   "Sword",
@@ -54,7 +54,7 @@ export const firstWords = [
   "Banana",
   "Collapse",
 ]
-export const secondWords = [
+export var secondWords = [
   "Fish",
   "Meal",
   "Trap",
