@@ -17,4 +17,5 @@
 - [x] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
 - [x] Write Function to get Enter key to act like user pressed guess button
 - [ ] Get Score to display properly on refresh and load
-- [ ] Add more and more word choices so that the combos are endless!!!!
+- [x] Add more and more word choices so that the combos are endless!!!!
+- [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area
