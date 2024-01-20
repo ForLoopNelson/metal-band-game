@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
       guesses--
       setTimeout(() => {
         resultMsg.innerText = ""
-      }, 5000)
+      }, 15000)
       document.querySelector("#guesses-left").innerText = guesses
       if (guesses == 0) {
         resultMsg.innerText = `You've run out of guesses! The correct answer was ${word}. Use Reset Game button to start over`
@@ -61,6 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       guesses = 3
       localStorage.setItem("score", score)
       update.innerHTML = localStorage.getItem("score")
+      generateNewWords()
       location.reload()
     })
   }
