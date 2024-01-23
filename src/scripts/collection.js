@@ -56,6 +56,11 @@ export var firstWords = [
   "Banana",
   "Spoiled",
   "Collapse",
+  "Falcon",
+  "Crazy",
+  "Filth",
+  "Glue",
+  "Demon",
 ]
 export var secondWords = [
   "Fish",
