@@ -131,4 +131,15 @@ button {
     height: 1.56rem;
     font-size: 16px;
   }
+
+  #correct-guess-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+  }
+
+  #correct-letters {
+    margin-right: 20px;
+  }
 }
