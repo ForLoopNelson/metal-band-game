@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const button = document.getElementById("guess-btn")
   const guessInput = document.querySelector(".guess")
   const resultMsg = document.querySelector("#guess-msg")
+  const letterCorrectMsg = document.querySelector("#correct-letters") //testing
   const update = document.getElementById("update")
   let guesses = 3
   let score = 0
@@ -26,16 +27,44 @@ document.addEventListener("DOMContentLoaded", () => {
   })
   function handleButtonClick() {
     if (localStorage.getItem("score") != null) {
-      score = localStorage.getItem("score")
+      score = parseInt(localStorage.getItem("score")) || 0
       update.innerHTML = localStorage.getItem("score")
     }
 
     resultMsg.innerText = ""
+    letterCorrectMsg.innerText = "" //testing
     const word = document
       .querySelector("#random-font")
-      .textContent.toLowerCase()
-    const guess = guessInput.value.toLowerCase()
+      .textContent.trim()
+      .toLowerCase()
 
+    const guess = guessInput.value.trim().toLowerCase()
+    console.log(guess)
+    console.log(word)
+    // Show correct letters and incorrect ones with _  (WIP)************************************************
+    let correctLetters = ""
+    let incorrectGuess = false
+
+    for (let i = 0; i < word.length; i++) {
+      if (word[i] === " ") {
+        correctLetters += " "
+      } else if (guess.includes(word[i])) {
+        correctLetters += word[i]
+      } else {
+        correctLetters += "_"
+        incorrectGuess = true
+      }
+    }
+
+    // Add an additional space if the last character in the word is a space
+    if (word[word.length - 1] === " ") {
+      correctLetters += " "
+    }
+
+    if (incorrectGuess) {
+      letterCorrectMsg.innerText = correctLetters
+    }
+    // End of test section. Don't mess with other code ********************************************************************************************************************************************************************************************************************
     if (word === guess) {
       score++
       document.querySelector("#update").innerText = score
@@ -45,6 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       resultMsg.innerText = "Not correct. Try again."
       guesses--
+
       setTimeout(() => {
         resultMsg.innerText = ""
       }, 15000)
