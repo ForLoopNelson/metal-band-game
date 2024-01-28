@@ -18,9 +18,14 @@
 - [ ] Get Score to display properly on refresh and load
 - [x] Add more and more word choices so that the combos are endless!!!!
 - [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
+- [ ] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
 
 ## Issues
 
 - Sometimes it says the answer is wrong, even though it should be a correct guess. See screenshot below:
 
 ![Correct answer Error](./public/answer_error.PNG)
+
+- Issue only seems to happen on mobile but sometimes the font cuts off and another random font shows behind it. Doesn't affect the word combo but looks odd. Example screenshot from mobile below:
+
+![Font Issue](./public/font_issue.jpg)
