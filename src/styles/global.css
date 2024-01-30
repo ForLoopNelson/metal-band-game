@@ -40,6 +40,20 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "ArtDystopia";
+  src: url("./fonts/ArtDystopia.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Kun-Denta";
+  src: url("./fonts/Kun-Denta.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
 
 h1 {
   font-family: "Onerock", Arial, Helvetica, sans-serif;
