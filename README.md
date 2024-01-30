@@ -19,7 +19,7 @@
 - [x] Add more and more word choices so that the combos are endless!!!!
 - [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
 - [ ] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
-- [ ] Find more Fonts to use.
+- [x] Find more Fonts to use.
 
 ## Issues
 
