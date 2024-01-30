@@ -3,7 +3,9 @@ export var fonts = [
   "MaskdownOne-BWV7V",
   "DeadwaxEx",
   "Rusuck",
+  "ArtDystopia",
   "Gorezack",
+  "Kun-Denta",
   "CronicleDemo",
 ]
 export var firstWords = [
