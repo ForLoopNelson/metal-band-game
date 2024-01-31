@@ -131,6 +131,10 @@ button {
     line-height: 2px;
   }
 
+  .highScore {
+    font-size: 23px;
+  }
+
   #guesses-left,
   .p-guess {
     margin: 0;
