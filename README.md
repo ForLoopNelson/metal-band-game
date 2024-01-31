@@ -17,11 +17,14 @@
 - [x] Write Function to get Enter key to act like user pressed guess button
 - [ ] Get Score to display properly on refresh and load
 - [x] Add more and more word choices so that the combos are endless!!!!
-- [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
-- [ ] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
+
 - [x] Find more Fonts to use.
 
 ## Issues
+
+- [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
+- [ ] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
+- [ ] Sometimes for seemingly no reason it won't show correct letters when user chooses incorrect. .
 
 - Sometimes it says the answer is wrong, even though it should be a correct guess. See screenshot below:
 
