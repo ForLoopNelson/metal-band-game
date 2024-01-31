@@ -15,8 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultMsg = document.querySelector("#guess-msg")
   const letterCorrectMsg = document.querySelector("#correct-letters") //testing
   const update = document.getElementById("update")
+  const updateHighScore = document.getElementById("update-hi")
   let guesses = 3
   let score = 0
+  let highScore = localStorage.getItem("highScore") || 0
 
   button.addEventListener("click", handleButtonClick)
 
@@ -29,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
     if (localStorage.getItem("score") != null) {
       score = parseInt(localStorage.getItem("score")) || 0
       update.innerHTML = localStorage.getItem("score")
+    }
+    if (localStorage.getItem("highScore") != null) {
+      highScore = parseInt(localStorage.getItem("highScore")) || 0
+      updateHighScore.innerHTML = localStorage.getItem("highScore")
     }
 
     resultMsg.innerText = ""
@@ -68,6 +74,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (word === guess) {
       score++
       document.querySelector("#update").innerText = score
+      if (score > highScore) {
+        highScore = score
+        updateHighScore.innerText = highScore
+        localStorage.setItem("highScore", highScore)
+      }
       localStorage.setItem("score", score)
       update.innerHTML = localStorage.getItem("score")
       generateNewWords()
@@ -83,18 +94,20 @@ document.addEventListener("DOMContentLoaded", () => {
         resultMsg.innerText = `You've run out of guesses! The correct answer was ${word}. Use Reset Game button to start over`
       }
     }
-    document.querySelector("#update").innerText = score
+  }
+
+  document.querySelector("#update").innerText = score
+  localStorage.setItem("score", score)
+
+  document.querySelector(".reset-game").addEventListener("click", () => {
+    score = 0
+    guesses = 3
+    update.innerHTML = score
     localStorage.setItem("score", score)
 
-    document.querySelector(".reset-game").addEventListener("click", () => {
-      score = 0
-      guesses = 3
-      localStorage.setItem("score", score)
-      update.innerHTML = localStorage.getItem("score")
-      generateNewWords()
-      location.reload()
-    })
-  }
+    generateNewWords()
+    location.reload()
+  })
 
   function generateNewWords() {
     const newFirstWord = getRandomWord(firstWords)
