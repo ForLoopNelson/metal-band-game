@@ -42,13 +42,10 @@ const selectedFont = fonts[randomFonts];
 		
 		</ul>
 		<section class="score-guesses">
-			
-			
-			
-			
-			
 			<span id="guesses-left">3</span>&nbsp;<p class="p-guess">Guesses Left</p>&nbsp;&nbsp;
 			<p class="score">Score:&nbsp;<span id="update"></span></p>
+			<div class="break"></div>
+			<p class="highScore">Highest Score:&nbsp;<span id="update-hi"></span></p>
 			
 		</section>
     <p class="return"><button class="reset-game"> Reset Game (Will reset the score)</button></p>
@@ -93,6 +90,14 @@ const selectedFont = fonts[randomFonts];
 		align-items: center;
 	}
 	
+	.break {
+		flex-basis: 100%;
+		height: 0;
+	}
+
+	.highScore {
+		margin-top: 20px;
+	}
 	
 	.link-card-grid {
 		display: grid;
@@ -138,6 +143,8 @@ const selectedFont = fonts[randomFonts];
 			font-family:'Franklin Gothic Medium';
 			font-size: 30px;
 			}
+
+			
 			
 			#correct-letters {
 				display: flex;
