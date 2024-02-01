@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const update = document.getElementById("update")
   const updateHighScore = document.getElementById("update-hi")
   let guesses = 3
-  let score = 0
-  let highScore = localStorage.getItem("highScore") || 0
+  let score = parseInt(localStorage.getItem("score")) || 0
+  let highScore = parseInt(localStorage.getItem("highScore")) || 0
 
   button.addEventListener("click", handleButtonClick)
 
@@ -100,7 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem("score", score)
 
     generateNewWords()
-    location.reload()
   })
 
   function generateNewWords() {
