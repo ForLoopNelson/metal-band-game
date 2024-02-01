@@ -49,25 +49,19 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log(word)
     // Show correct letters and incorrect ones with _  (WIP)************************************************
     let correctLetters = ""
-    let incorrectGuess = false
 
     for (let i = 0; i < word.length; i++) {
+      const char = word[i]
       if (word[i] === " ") {
         correctLetters += " "
-      } else if (guess.includes(word[i])) {
-        correctLetters += word[i]
+      } else if (guess.includes(char)) {
+        correctLetters += char === guess[i] ? char : "_"
       } else {
         correctLetters += "_"
-        incorrectGuess = true
       }
     }
 
-    // Add an additional space if the last character in the word is a space
-    if (word[word.length - 1] === " ") {
-      correctLetters += " "
-    }
-
-    if (incorrectGuess) {
+    if (correctLetters.includes("_")) {
       letterCorrectMsg.innerText = correctLetters
     }
     // End of test section. Don't mess with other code ********************************************************************************************************************************************************************************************************************
