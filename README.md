@@ -15,10 +15,10 @@
 - [x] test on multiple devices
 - [x] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
 - [x] Write Function to get Enter key to act like user pressed guess button
-- [ ] Get Score to display properly on refresh and load
+- [x] Get Score to display properly on refresh and load
 - [x] Add more and more word choices so that the combos are endless!!!!
-
 - [x] Find more Fonts to use.
+- [ ] Write function to make sure words don't repeat too often.
 
 ## Issues
 
