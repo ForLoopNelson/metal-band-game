@@ -48,6 +48,13 @@
   font-display: block;
 }
 @font-face {
+  font-family: "RoseThorns-GOB1Z";
+  src: url("./fonts/RoseThorns-GOB1Z.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
   font-family: "Kun-Denta";
   src: url("./fonts/Kun-Denta.ttf") format("truetype");
   font-weight: normal;
