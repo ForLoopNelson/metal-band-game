@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (word[i] === " ") {
         correctLetters += " "
       } else {
-        correctLetters += guess.includes(char) ? char : "💥"
+        correctLetters += guess[i] === char ? char : "💥"
       }
     }
 
@@ -92,12 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   localStorage.setItem("score", score)
 
   document.querySelector(".reset-game").addEventListener("click", () => {
-    score = 0
-    guesses = 3
-    update.innerHTML = score
-    localStorage.setItem("score", score)
-
-    generateNewWords()
+    generateNewGame()
   })
 
   function generateNewWords() {
@@ -112,5 +107,31 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#random-font").style.fontFamily = randomFont
     // Reset input field and set it to empty string
     guessInput.value = ""
+  }
+  function generateNewGame() {
+    console.log("Generating new game...")
+    document.querySelector("#update").innerText = score
+    document.querySelector("#guesses-left").innerText = guesses
+    score = 0
+    guesses = 5
+    localStorage.setItem("score", score)
+    console.log("Score:", score, "Guesses:", guesses)
+    resultMsg.innerText = " "
+    letterCorrectMsg.innerText = ""
+
+    // Update elements on the screen
+    updateScoreElement()
+    updateGuessesElement()
+
+    // Generate new words
+    generateNewWords()
+  }
+
+  function updateScoreElement() {
+    document.querySelector("#update").innerText = score
+  }
+
+  function updateGuessesElement() {
+    document.querySelector("#guesses-left").innerText = guesses
   }
 })
