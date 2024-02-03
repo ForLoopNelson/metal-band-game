@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const letterCorrectMsg = document.querySelector("#correct-letters") //testing
   const update = document.getElementById("update")
   const updateHighScore = document.getElementById("update-hi")
-  let guesses = 3
+  let guesses = 5
   let score = parseInt(localStorage.getItem("score")) || 0
   let highScore = parseInt(localStorage.getItem("highScore")) || 0
 
@@ -54,14 +54,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const char = word[i]
       if (word[i] === " ") {
         correctLetters += " "
-      } else if (guess.includes(char)) {
-        correctLetters += char === guess[i] ? char : "_"
       } else {
-        correctLetters += "_"
+        correctLetters += guess.includes(char) ? char : "💥"
       }
     }
 
-    if (correctLetters.includes("_")) {
+    if (correctLetters.includes("💥")) {
       letterCorrectMsg.innerText = correctLetters
     }
     // End of test section. Don't mess with other code ********************************************************************************************************************************************************************************************************************
