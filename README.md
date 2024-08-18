@@ -10,7 +10,7 @@
 
 - [x] Update README
 - [x] Get Functionality working ie: score count and guess count.
-- [ ] Hide the words to guess as they show in the inspector
+- [x] Hide the words to guess as they show in the inspector
 - [x] Deploy Site
 - [x] test on multiple devices
 - [x] Mobile Responsive. Check site on phone as it differs from the view the console inspector gives
@@ -24,8 +24,8 @@
 ## Issues
 
 - [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
-- [ ] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
-- [ ] Sometimes for seemingly no reason it won't show correct letters when user chooses incorrect. .
+- [x] Get the correct letter message to display better and not give away answer when user's guess is like one letter off.
+- [x] Sometimes for seemingly no reason it won't show correct letters when user chooses incorrect. .
 
 - Sometimes it says the answer is wrong, even though it should be a correct guess. See screenshot below:
 
