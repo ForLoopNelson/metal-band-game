@@ -19,6 +19,7 @@
 - [x] Add more and more word choices so that the combos are endless!!!!
 - [x] Find more Fonts to use.
 - [ ] Write function to make sure words don't repeat too often.
+- [ ] Check bug where plyaer guesses again and previously solved word shows as not correct.
 
 ## Issues
 
