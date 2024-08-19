@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const guess = guessInput.value.trim().toLowerCase()
     console.log(guess)
     console.log(word)
-    // Show correct letters and incorrect ones with _  (WIP)************************************************
+    // Show correct letters and incorrect ones with _ code looks correct but sometimes it shows incorrectly (WIP)************************************************
     let correctLetters = ""
 
     for (let i = 0; i < word.length; i++) {
