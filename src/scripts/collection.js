@@ -15,6 +15,7 @@ export var firstWords = [
   "Sword",
   "Knives",
   "Pickled",
+  "Giggle",
   "Carnage",
   "Brutal",
   "Wretched",
@@ -101,6 +102,7 @@ export var firstWords = [
   "Filthy",
   "Glue",
   "Demon",
+  "Rusty",
 ]
 export var secondWords = [
   "Fish",
@@ -112,6 +114,7 @@ export var secondWords = [
   "Lost",
   "Machine",
   "Giants",
+  "Stamp",
   "Rivers",
   "Lobster",
   "Relics",
@@ -189,4 +192,6 @@ export var secondWords = [
   "Squid",
   "Mortal",
   "Greasy",
+  "Frost",
+  "Bones",
 ]
