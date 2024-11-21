@@ -45,18 +45,17 @@ document.addEventListener("DOMContentLoaded", () => {
       .toLowerCase()
 
     const guess = guessInput.value.trim().toLowerCase()
-    console.log(guess)
-    console.log(word)
+    const normalizedGuess = guess.padEnd(word.length, " ").slice(0, word.length)
+    console.log("Normalized Guess:", normalizedGuess)
+    console.log("Word:", word)
+
     // Show correct letters and incorrect ones with _ code looks correct but sometimes it shows incorrectly (WIP)************************************************
     let correctLetters = ""
 
     for (let i = 0; i < word.length; i++) {
       const char = word[i]
-      if (word[i] === " ") {
-        correctLetters += " "
-      } else {
-        correctLetters += guess[i] === char ? char : "💥"
-      }
+      const guessedChar = normalizedGuess[i]
+      correctLetters += char === " " ? " " : guessedChar === char ? char : "💥"
     }
 
     if (correctLetters.includes("💥")) {
