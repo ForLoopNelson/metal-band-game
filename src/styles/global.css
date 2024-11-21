@@ -62,6 +62,10 @@
   font-display: block;
 }
 
+.astro-a path {
+  fill: rgba(83, 53, 122, 0.4);
+}
+
 h1 {
   font-family: "Onerock", Arial, Helvetica, sans-serif;
   font-size: 2rem;
