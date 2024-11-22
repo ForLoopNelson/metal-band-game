@@ -9,11 +9,13 @@
 -- Things that need to be completed:
 
 - [ ] Write function to make sure words don't repeat too often.
-- [ ] Check bug where plyaer guesses again and previously solved word shows as not correct.
+- [ ] Check bug where player guesses again and previously solved word shows as not correct. (Might be solved, as I haven't been able to recreate this scenario.)
 
 ## Issues
 
 - [ ] Fix issue where some of the fonts "CronicleDemo" will overlap into the guess box area. Need to only get that one font smaller without it affecting the other fonts.
+
+## Fixed but still Testing:
 
 - Sometimes it says the answer is wrong, even though it should be a correct guess. See screenshot below:
 
