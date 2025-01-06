@@ -101,9 +101,19 @@ document.addEventListener("DOMContentLoaded", () => {
     const randomFont = getRandomWord(fonts)
 
     // Update the content of #random-font with the new words
-    document.querySelector("#random-font").textContent = newWords
-    // Update the font dynamically
-    document.querySelector("#random-font").style.fontFamily = randomFont
+    const randomFontElement = document.querySelector("#random-font")
+    randomFontElement.textContent = newWords
+
+    // Dynamically update CSS variables for the font family and size
+    const root = document.documentElement
+    root.style.setProperty("--selectedFont", randomFont)
+    root.style.setProperty(
+      "--selectedFontSize",
+      randomFont === "CronicleDemo" ? "2rem" : "4rem"
+    )
+
+    // Apply the font family
+    randomFontElement.style.fontFamily = randomFont
     // Reset input field and set it to empty string
     guessInput.value = ""
   }
