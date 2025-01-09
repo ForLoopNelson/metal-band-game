@@ -109,13 +109,23 @@ document.addEventListener("DOMContentLoaded", () => {
     root.style.setProperty("--selectedFont", randomFont)
     root.style.setProperty(
       "--selectedFontSize",
-      randomFont === "CronicleDemo" ? "2rem" : "4rem"
+      randomFont === "CronicleDemo" ? "2.5rem" : "4rem"
     )
 
     // Apply the font family
     randomFontElement.style.fontFamily = randomFont
     // Reset input field and set it to empty string
     guessInput.value = ""
+    console.log(
+      getComputedStyle(document.documentElement).getPropertyValue(
+        "--selectedFont"
+      )
+    )
+    console.log(
+      getComputedStyle(document.documentElement).getPropertyValue(
+        "--selectedFontSize"
+      )
+    )
   }
   function generateNewGame() {
     console.log("Generating new game...")
