@@ -4,6 +4,7 @@ export var fonts = [
   "DeadwaxEx",
   "RoseThorns-GOB1Z",
   "Rusuck",
+  "Snaokesur-Regular",
   "ArtDystopia",
   "Gorezack",
   "Kun-Denta",
@@ -29,6 +30,7 @@ export var firstWords = [
   "Grasping",
   "Screaming",
   "Noodle",
+  "Flimsy",
   "Flightless",
   "Lavish",
   "Banjo",
@@ -54,6 +56,7 @@ export var firstWords = [
   "Chains",
   "Cracked",
   "Money",
+  "Shredded",
   "Molten",
   "Charming",
   "Plastic",
@@ -120,6 +123,7 @@ export var firstWords = [
 ]
 export var secondWords = [
   "Fish",
+  "Tacos",
   "Meal",
   "Trap",
   "Towers",
