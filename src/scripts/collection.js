@@ -49,6 +49,7 @@ export var firstWords = [
   "Gut",
   "Mouse",
   "Vision",
+  "Murder",
   "Magic",
   "Pale",
   "Haunted",
