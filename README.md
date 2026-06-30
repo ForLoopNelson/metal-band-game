@@ -9,9 +9,10 @@
 -- Things that need to be completed:
 
 - [ ] Write function to make sure words don't repeat too often.
-- [ ] Check bug where player guesses again and previously solved word shows as not correct. (Might be solved, as I haven't been able to recreate this scenario.)
+- [x] Check bug where player guesses again and previously solved word shows as not correct. (Might be solved, as I haven't been able to recreate this scenario.)
 - [ ] Add more words to the game.
 - [ ] Remove test comments and console logs once testing is done.
+- [ ] Make it fancier. Add wordle like animation when showing correct and not correct letters.
 
 ## Issues
 
