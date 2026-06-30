@@ -1,167 +1,147 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css'
-import {fonts, firstWords, secondWords} from '../scripts/collection'
+import Layout from "../layouts/Layout.astro";
+import "../styles/global.css";
+import { fonts, firstWords, secondWords } from "../scripts/collection";
 
- 
-
-
-function getRandomIndex(array) {
+function getRandomIndex(array: string[]): number {
   return Math.floor(Math.random() * array.length);
 }
 
 const randomFirstWordIndex = getRandomIndex(firstWords);
 const randomSecondWordIndex = getRandomIndex(secondWords);
-const randomFonts = getRandomIndex(fonts)
+const randomFonts = getRandomIndex(fonts);
 
 const selectedFirstWord = firstWords[randomFirstWordIndex];
 const selectedSecondWord = secondWords[randomSecondWordIndex];
-const selectedWords = `${selectedFirstWord} ${selectedSecondWord}`
+const selectedWords = `${selectedFirstWord} ${selectedSecondWord}`;
 const selectedFont = fonts[randomFonts];
-
-
-
 ---
 
-
-
 <Layout title="What's That Say?">
-	<main>
-	
-		<h1><span class="text-gradient">What That Say</span></h1>
-    
-		
-		<ul role="list" class="link-card-grid">
-		<span id="random-font"  >{selectedWords}</span>
-		<section>
-		<input type="text" class="guess" >
-		<button id="guess-btn" type="submit">Guess</button>
-		</section>
-		<span id="guess-msg"></span>
-		<div id="correct-letters"></div>
-		
-		</ul>
-		<section class="score-guesses">
-			<span id="guesses-left">5</span>&nbsp;<p class="p-guess">Guesses Left</p>&nbsp;&nbsp;
-			<p class="score">Score:&nbsp;<span id="update"></span></p>
-			<div class="break"></div>
-			<p class="highScore">Highest Score:&nbsp;<span id="update-hi"></span></p>
-			
-		</section>
-    <p class="return"><button class="reset-game"> Reset Game (Will reset the score)</button></p>
-	</main>
+  <main>
+    <h1><span class="text-gradient">What That Say</span></h1>
 
+    <ul role="list" class="link-card-grid">
+      <span id="random-font">{selectedWords}</span>
+      <section>
+        <input type="text" class="guess" />
+        <button id="guess-btn" type="submit">Guess</button>
+      </section>
+      <span id="guess-msg"></span>
+      <div id="correct-letters"></div>
+    </ul>
+    <section class="score-guesses">
+      <span id="guesses-left">5</span>&nbsp;<p class="p-guess">
+        Guesses Left
+      </p>&nbsp;&nbsp;
+      <p class="score">Score:&nbsp;<span id="update"></span></p>
+      <div class="break"></div>
+      <p class="highScore">Highest Score:&nbsp;<span id="update-hi"></span></p>
+    </section>
+    <p class="return">
+      <button class="reset-game"> Reset Game (Will reset the score)</button>
+    </p>
+  </main>
 </Layout>
 
+<style define:vars={{ selectedFont }}>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: white;
+    font-size: 20px;
+    line-height: 1.6;
+  }
 
-<style define:vars={{selectedFont}}>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 800px;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-		}
+  h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+  .text-gradient {
+    background-image: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 400%;
+    background-position: 0%;
+  }
 
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-		margin-bottom: 1em;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	
-	#guess-msg {
-		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-		font-size: 20px;
-		color: red;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
-		align-items: center;
-	}
-	
-	.break {
-		flex-basis: 100%;
-		height: 0;
-	}
+  #guess-msg {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 20px;
+    color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
 
-	.highScore {
-		margin-top: 20px;
-	}
-	
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
+  .break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+  .highScore {
+    margin-top: 20px;
+  }
+
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 2rem;
+    padding: 0;
     margin-top: 8rem;
-	}
+  }
 
+  #random-font {
+    font-family: var(--selectedFont, sans-serif);
+    font-size: var(--selectedFontSize, 4rem);
+  }
 
-    #random-font {
-      font-family: var(--selectedFont, sans-serif);
-			font-size: var(--selectedFontSize, 4rem);
-			
-    }
+  .guess {
+    margin-top: 30px;
+    border-radius: 20px;
+    width: 69%;
+    height: 35px;
+    border: 2px ridge rgb(93, 1, 47);
+  }
 
-	
-		.guess {
-			margin-top: 30px;
-			border-radius: 20px;
-			width: 69%;
-			height: 35px;
-			border: 2px ridge rgb(93, 1, 47);
-		}
+  #guess-btn {
+    background: rgba(190, 44, 29, 0.8);
+    color: aliceblue;
+    margin-top: 15px;
+    margin-left: 155px;
+    border-radius: 18px;
+    border: 2px ridge rgb(241, 163, 18);
+    height: 36px;
+    width: 35%;
+  }
 
-		#guess-btn {
-			background: rgba(190, 44, 29, .8);
-			color: aliceblue;
-			margin-top: 15px;
-			margin-left: 155px;
-			border-radius: 18px;
-			border: 2px ridge rgb(241, 163, 18);
-			height: 36px;
-			width: 35%;
+  .score-guesses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    font-family: "Franklin Gothic Medium";
+    font-size: 30px;
+  }
 
-		}
-
-		.score-guesses {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			align-items: center;
-			margin-top: 60px;
-			font-family:'Franklin Gothic Medium';
-			font-size: 30px;
-			}
-
-			
-			
-			#correct-letters {
-				display: flex;
-				flex-wrap: nowrap;
-				white-space: normal;
-				justify-content: center;
-				align-items: center;
-				color: rgb(9, 155, 9);
-				font-family:'Times New Roman', Times, serif;
-				font-size: 30px;
-			}
-			#correct-guess-box {
-				color: aliceblue;
-			}
-
-			
+  #correct-letters {
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: normal;
+    justify-content: center;
+    align-items: center;
+    color: rgb(9, 155, 9);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif, Times, serif;
+    font-size: 39px;
+  }
+  #correct-guess-box {
+    color: aliceblue;
+  }
 </style>
-
-
