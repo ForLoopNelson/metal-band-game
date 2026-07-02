@@ -95,6 +95,7 @@ export var firstWords = [
   "Mundane",
   "Forest",
   "Vivid",
+  "Simple",
   "Piggy",
   "Gravel",
   "Whiskey",
@@ -123,6 +124,7 @@ export var firstWords = [
   "Glue",
   "Demon",
   "Rusty",
+  "Round",
 ]
 export var secondWords = [
   "Fish",
@@ -133,6 +135,7 @@ export var secondWords = [
   "Towers",
   "Damage",
   "Pancakes",
+  "Abyss",
   "Lost",
   "Machine",
   "Peppers",
@@ -151,6 +154,7 @@ export var secondWords = [
   "Clowns",
   "Torches",
   "Void",
+  "Pedals",
   "Cream",
   "Crater",
   "Lake",
