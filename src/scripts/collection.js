@@ -103,6 +103,7 @@ export var firstWords = [
   "Shadow",
   "Planet",
   "Boundless",
+  "Apple",
   "Gravity",
   "Ethereal",
   "Acid",
