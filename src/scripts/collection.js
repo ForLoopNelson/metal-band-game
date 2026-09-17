@@ -63,6 +63,7 @@ export var firstWords = [
   "Plastic",
   "Corruption",
   "Rat",
+  "Apple",
   "Clap",
   "Banished",
   "Blister",
