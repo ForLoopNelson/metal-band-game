@@ -120,6 +120,7 @@ export var firstWords = [
   "Falcon",
   "Chilly",
   "Minty",
+  "Full",
   "Crazy",
   "Filthy",
   "Glue",
