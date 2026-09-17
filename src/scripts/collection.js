@@ -143,6 +143,7 @@ export var secondWords = [
   "Lost",
   "Machine",
   "Peppers",
+  "Palace",
   "Giants",
   "Whisper",
   "Seed",
