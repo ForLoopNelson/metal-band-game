@@ -68,6 +68,14 @@
   font-style: normal;
   font-display: block;
 }
+@font-face {
+  font-family: "Redeyes";
+  src: url("./fonts/Redeyes.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 
 .astro-a path {
   fill: rgba(83, 53, 122, 0.4);
