@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
     root.style.setProperty(
       "--selectedFontSize",
       randomFont === "CronicleDemo" ? "2.5rem" : randomFont ===  "Snaokesur-Regular"
- ? "5rem"  : "4rem"
+ ? "6rem"  : "5rem" 
     )
 
     // Apply the font family
