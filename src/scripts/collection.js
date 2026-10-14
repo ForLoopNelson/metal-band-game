@@ -4,6 +4,7 @@ export var fonts = [
   "DeadwaxEx",
   "RoseThorns-GOB1Z",
   "Rusuck",
+  "Redeyes",
   "Snaokesur-Regular",
   "ArtDystopia",
   "Gorezack",
