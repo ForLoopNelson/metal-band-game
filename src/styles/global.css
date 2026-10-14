@@ -36,6 +36,7 @@
 @font-face {
   font-family: "CronicleDemo";
   src: url("./fonts/CronicleDemo.otf") format("opentype");
+  size-adjust: 80%;
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -64,6 +65,7 @@
 @font-face {
   font-family: "Kun-Denta";
   src: url("./fonts/Kun-Denta.ttf") format("truetype");
+  size-adjust: 120%;
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -71,6 +73,7 @@
 @font-face {
   font-family: "Redeyes";
   src: url("./fonts/Redeyes.otf") format("opentype");
+  size-adjust: 180%;
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -127,6 +130,8 @@ button {
     font-size: 37px;
   }
 
+
+  /* remove??? */
   #random-font {
     font-size: 20px;
   }
